@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href='{% static "/styles.css" %}'>
+  <title>Website - Design</title>
+</head>
+
+<body>
+
+
+  <div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="/list">List</a>
+    <a href="/add">Add</a>
+  </div>
+  
+  <div class="container-fluid">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+</body>
+
+<footer>
+  Copyright (C) 2023, Django Club of LORDS.
+</footer>
+
+</html>
+
+
+

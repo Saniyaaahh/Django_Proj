@@ -1,0 +1,28 @@
+{% extends "common.htm" %}
+{% block content %}
+
+<h1>List of all Students </h1>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    
+    <th>Branch</th>
+    <th>Year</th>
+    <th>Actions</th>
+  </tr>
+  {% for s in students %}
+  <tr>
+    <td>{{s.fname}}</td>
+    <td>{{s.lname}}</td>
+    <td>{{s.branch}}</td>
+    <td>{{s.year}}</td>
+    <td>
+      <a href="/details/{{s.id}}">View</a>
+      <a href="/delete/{{s.id}}">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
